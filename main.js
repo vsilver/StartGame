@@ -3,7 +3,7 @@ const $arenas = document.querySelector('.arenas');
 const player1 = {
     player: 1,
     name: 'SCORPION',
-    hp: '50',
+    hp: '100',
     img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
     weapon: ["Gun", "go", "home"],
     attack: function (name){
@@ -14,13 +14,23 @@ const player1 = {
 const player2 = {
     player: 2,
     name: 'SUB-ZERO',
-    hp: '80',
+    hp: '100',
     img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
     weapon: ["Gun", "go", "home"],
     attack: function (name){
         console.log(name + 'Fight...')
     }
 };
+
+function changeHP(player){
+    if (player.hp <= 0){
+        player.hp == 0
+    }
+}
+
+function random(player) {
+    return(player.hp - Math.ceil(Math.random() * 20));
+}
 
 function createElement(tag, className) {
 
